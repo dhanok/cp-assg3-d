@@ -1,0 +1,77 @@
+/*
+  Roll No: 52
+  Student Name: HARSH MANOJ CHANDANSHIVE
+  Program Title: Write a program in C for multiplication of two square matrix .
+
+  Task Given By:
+  Roll No. of Assignee: 51
+  Assignee Name: AADITYA THAKUR
+
+*/
+
+#include <stdio.h>
+
+int main ()
+{
+    int size, i, j, k;
+
+    // Enter the size of the square matrices
+    printf("Enter the size of the square matrices: ");
+    scanf("%d", &size);
+
+    // Declare two matrices and a result matrix
+    int matrix1[size][size], matrix2[size][size], result[size][size];
+
+    // Input elements of the first matrix
+    printf("Enter elements of the first matrix:\n");
+    for (i = 0; i < size; i++){
+        for (j = 0; j < size; j++){
+            scanf("%d", &matrix1[i][j]);
+            }
+            }
+
+    // Input elements of the second matrix
+    printf("Enter elements of the second matrix:\n");
+    for (i = 0; i < size; i++){
+        for (j = 0; j < size; j++){
+            scanf("%d", &matrix2[i][j]);
+        }
+    }
+
+    // calculate the product of the two matrices
+    for (i = 0; i < size; i++){
+        for (j = 0; j < size; j++){
+            result[i][j] = 0;
+            for (k = 0; k < size; k++){
+                    result[i][j] += matrix1[i][k] * matrix2[k][j];
+            }
+        }
+    }
+
+    // The result of matrix
+    printf("Product of the two matrices is:\n");
+    for (i = 0; i < size; i++){
+        for (j = 0; j < size; j++){
+            printf("%d ", result[i][j]);
+            }
+        printf("\n");
+        }
+
+    return 0;
+}
+
+/*
+Enter the size of the square matrices: 3 3
+Enter elements of the first matrix:
+1 3 5
+2 4 6
+3 6 9
+Enter elements of the second matrix:
+2 4 6
+9 7 4
+1 7 0
+Product of the two matrices is:
+45 18 40
+73 32 62
+96 45 87
+*/
