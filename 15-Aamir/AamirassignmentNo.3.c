@@ -11,8 +11,8 @@
 
 // Function to calculate BMI using pointers
 float calculateBMI(float *weight, float *height) {
-    return *weight / (*height * *height); //  Bmi=   kg /m*m
-} //                                                
+    return *weight / (*height * *height); //  Bmi=   kg
+} //                                                 m*m
 
 // Function to determine BMI category
 void bmiCategory(float *bmi) {
@@ -30,7 +30,7 @@ int main() {
     float myWeight, myHeight, myBMI;
 
     // User input using personal variable names
-    printf("Welcome to the Aamir's BMI Calculator! Let's check your health.\n");
+    printf("Welcome to the Aamir's BMI Calculator! Let's check your health.\n\n");
     printf("Enter your weight in  kg: ");
     scanf("%f", &myWeight);
     printf("Enter your height in feet: ");
@@ -40,7 +40,7 @@ int main() {
     myBMI = calculateBMI(&myWeight, &myHeight);
 
     // Display BMI result
-    printf("Your BMI is: %.2f\n", myBMI);
+    printf("Your BMI is: %.2f\n\n", myBMI);
 
     // Determine and display BMI category
     bmiCategory(&myBMI);
@@ -49,3 +49,14 @@ int main() {
 
     return 0;
 }
+/*
+Output
+Welcome to the Aamir's BMI Calculator! Let's check your health.
+
+Enter your weight in  kg: 73
+Enter your height in feet: 5.8
+Your BMI is: 23.36
+
+You are in the normal weight range. Stay healthy!
+Thank you for using this Aamir's BMI calculator. Stay fit!
+*/
