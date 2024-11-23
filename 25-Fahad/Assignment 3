@@ -1,0 +1,39 @@
+/*
+Name : Shaikh Mohammed Fahaad
+RollNo. : 25
+Topic : Leap Year Finder
+
+task Given by
+partner name : Obaid
+Partner Roll no. 41
+*/
+
+
+#include<stdio.h>
+
+int main () {
+
+    int year;
+
+    //Take User Input 
+    printf("Enter a year\t:");
+    scanf("%d",&year);
+
+    //Check for leap year
+    if(( year % 4 == 0 && year % 100!=0) || (year % 400 == 0)) {
+        printf("%d is a leap year \n",year);
+        }else
+        printf("%d is not a leap year\n",year);
+
+
+    return 0;
+}
+
+
+/* output
+Enter a year    :2020
+2020 is a leap year
+
+Enter a year    :2021
+2025 is not a leap year
+*/
